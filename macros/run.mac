@@ -1,0 +1,18 @@
+# Initialize kernel
+/process/em/verbose 0
+/run/initialize
+/control/verbose 2
+#/tracking/verbose 2
+
+
+# detector settings
+/detector/setNbOfLayers 10
+/detector/setSizeXY 100 cm
+/detector/setSizeZ 100 cm
+/detector/setDetectorMaterial G4_PbWO4 # G4_AIR  G4_W G4_Pb
+
+# particle settings
+/gun/particle e-
+#/gun/particle gamma
+/gun/energy 100 MeV
+/run/beamOn 100
