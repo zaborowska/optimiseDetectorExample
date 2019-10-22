@@ -9,26 +9,33 @@
 #
 # Run menu :
 /gui/addMenu run Run
-/gui/addButton run "beamOn 1" "/run/beamOn 1"
-/gui/addButton run run1 "/control/execute run1.mac"
+/gui/addButton run "1 particles" "/run/beamOn 1"
+/gui/addButton run "10 particle" "/run/beamOn 10"
+/gui/addButton run "100 particles" "/run/beamOn 100"
+/gui/addButton run "1000 particles" "/run/beamOn 1000"
+/gui/addButton run "run.mac" "/control/execute run.mac"
 #
 # Gun menu :
-/gui/addMenu gun Gun
+/gui/addMenu gun Energy
 /gui/addButton gun "50 MeV"  "/gun/energy 50 MeV"
+/gui/addButton gun "100 MeV"  "/gun/energy 100 MeV"
+/gui/addButton gun "200 MeV"  "/gun/energy 200 MeV"
+/gui/addButton gun "500 MeV"  "/gun/energy 500 MeV"
 /gui/addButton gun "1 GeV"   "/gun/energy 1 GeV"
 /gui/addButton gun "10 GeV"  "/gun/energy 10 GeV"
-/gui/addButton gun "e-"      "/gun/particle e-"
-/gui/addButton gun "pi0"     "/gun/particle pi0"
-/gui/addButton gun "pi+"     "/gun/particle pi+"
-/gui/addButton gun "neutron" "/gun/particle neutron"
-/gui/addButton gun "proton"  "/gun/particle proton"
+/gui/addButton gun "20 GeV"  "/gun/energy 20 GeV"
+/gui/addButton gun "50 GeV"  "/gun/energy 50 GeV"
+/gui/addButton gun "100 GeV"  "/gun/energy 100 GeV"
+
+/gui/addMenu particle Particle
+/gui/addButton particle "e-"      "/gun/particle e-"
+/gui/addButton particle "e+"      "/gun/particle e+"
+/gui/addButton particle "photon"      "/gun/particle gamma"
+/gui/addButton particle "pi0"     "/gun/particle pi0"
+/gui/addButton particle "pi+"     "/gun/particle pi+"
+/gui/addButton particle "neutron" "/gun/particle neutron"
+/gui/addButton particle "proton"  "/gun/particle proton"
 #
-# Vis menu :
-/gui/addMenu vis Vis
-/gui/addButton vis DAWNFILE  "/control/execute visTutor/exN03Vis0.mac"
-/gui/addButton vis OpenInventor "/control/execute visTutor/exN03Vis5.mac"
-/gui/addButton vis TimeSlicing "/control/execute visTutor/exN03Vis12.mac"
-/gui/addButton vis EmShower "/control/execute visTutor/exN03Vis13.mac"
 #
 # Viewer menu :
 /gui/addMenu viewer Viewer
